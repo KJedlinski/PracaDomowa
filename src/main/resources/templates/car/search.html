@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Wyszukaj.</title>
+</head>
+<body>
+<h1>Wyszukiwanie samochodów.</h1>
+<form th:action="@{/cars/results}" method="post">
+    <label>Szukaj po nazwie modelu.</label>
+    <p> <input type="text" th:field="${cars.model}"/> </p>
+    <p> <input type="submit" value="Szukaj"/> </p>
+</form>
+<br />
+<a href="/cars/search">Znajdź samochód</a><br />
+<a href="/cars/add">Dodaj samochód.</a><br />
+<a href="/cars/all">Wyświetl wszystkie.</a><br />
+</body>
+</html>
